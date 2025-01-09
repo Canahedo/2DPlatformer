@@ -14,5 +14,5 @@ func _process(delta):
 
 func _on_body_entered(body):
 	print("Coin Collected")
-	#queue_free()
+	queue_free()
 	
