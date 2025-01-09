@@ -13,6 +13,6 @@ func _process(delta):
 
 
 func _on_body_entered(body):
-	print("Coin Collected")
+	Messenger.COIN_COLLECTED.emit()
 	queue_free()
 	
