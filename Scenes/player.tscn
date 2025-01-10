@@ -14,6 +14,10 @@
 [ext_resource type="Texture2D" uid="uid://dlur5e5md4b8o" path="res://Assets/Platformer Art Complete Pack/Base pack/Player/p3_walk/PNG/p3_walk11.png" id="12_0lcfg"]
 [ext_resource type="PackedScene" uid="uid://c5pyqsoo5ar4q" path="res://Scenes/ui.tscn" id="13_h1ep0"]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4ceaa"]
+radius = 30.0
+height = 84.0
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_2ahgp"]
 animations = [{
 "frames": [{
@@ -55,22 +59,18 @@ animations = [{
 "speed": 15.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4ceaa"]
-radius = 30.0
-height = 84.0
-
 [node name="CharacterBody2D" type="CharacterBody2D"]
 script = ExtResource("1_t44rk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 4)
+shape = SubResource("CapsuleShape2D_4ceaa")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_2ahgp")
 animation = &"walk"
 frame = 10
 frame_progress = 0.760141
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 4)
-shape = SubResource("CapsuleShape2D_4ceaa")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 offset = Vector2(0, -100)

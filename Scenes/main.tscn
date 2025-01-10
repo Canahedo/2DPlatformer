@@ -322,6 +322,7 @@ position = Vector2(1828, -158)
 position = Vector2(1410, -152)
 
 [node name="The_Pit" type="Area2D" parent="."]
+visible = false
 position = Vector2(0, 103)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="The_Pit"]
