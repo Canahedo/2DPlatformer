@@ -12,12 +12,11 @@ func _ready():
 func _process(delta):
 	pass
 
+
 func player_killed():
 	player.position = Vector2(0,0)
 	
 	
-
-
 func _on_the_pit_body_entered(body):
 	if body.name == "Player":
 		Messenger.PLAYER_KILLED.emit()
