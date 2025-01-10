@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=4 uid="uid://6orqgeh4rkwd"]
 
-[ext_resource type="PackedScene" uid="uid://c6g0rg0vmvl7y" path="res://Scenes/character.tscn" id="1_l00e6"]
+[ext_resource type="PackedScene" uid="uid://c6g0rg0vmvl7y" path="res://Scenes/player.tscn" id="1_l00e6"]
 [ext_resource type="Script" path="res://Scripts/main.gd" id="1_o6sqk"]
 [ext_resource type="Texture2D" uid="uid://c1ds2t6myg32m" path="res://Assets/Platformer Art Complete Pack/Base pack/Tiles/tiles_spritesheet.png" id="3_ep20f"]
 [ext_resource type="PackedScene" uid="uid://dry7onebn60bc" path="res://Scenes/coin.tscn" id="4_jlqlx"]
@@ -306,11 +306,18 @@ sources/0 = SubResource("TileSetAtlasSource_um64e")
 script = ExtResource("1_o6sqk")
 
 [node name="Terrain" type="TileMapLayer" parent="."]
+position = Vector2(-3, 0)
 tile_map_data = PackedByteArray("AAAAAAoAAAAHAAgAAAABAAoAAAAHAAgAAAACAAoAAAAHAAgAAAADAAoAAAAHAAgAAAAEAAoAAAAHAAgAAAAFAAoAAAAHAAgAAAAGAAoAAAAHAAgAAAAHAAoAAAAHAAgAAAAIAAoAAAAHAAgAAAAJAAoAAAAHAAgAAAAHAAgAAAAHAAgAAAAGAAkAAAAHAAgAAAAHAAkAAAAHAAgAAAAIAAkAAAAHAAgAAAAJAAYAAAAAAAQAAAAJAAcAAAAAAAQAAAAJAAgAAAAAAAQAAAAJAAkAAAAAAAQAAAD//wYAAAAAAAQAAAD//wcAAAAAAAQAAAD//wgAAAAAAAQAAAD//wkAAAAAAAQAAAD//woAAAAHAAgAAAA=")
 tile_set = SubResource("TileSet_cckow")
 
-[node name="Character" parent="." instance=ExtResource("1_l00e6")]
+[node name="Player" parent="." instance=ExtResource("1_l00e6")]
 position = Vector2(33, 643)
 
 [node name="Coin" parent="." instance=ExtResource("4_jlqlx")]
-position = Vector2(518, 530)
+position = Vector2(138, 648)
+
+[node name="Area2D" parent="." instance=ExtResource("4_jlqlx")]
+position = Vector2(224, 646)
+
+[node name="Area2D2" parent="." instance=ExtResource("4_jlqlx")]
+position = Vector2(315, 646)
